@@ -2,14 +2,17 @@ import { Box, Typography, Grid } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
 import { ProjectItem } from "./ProjectItem";
 import { projects } from "@/database/seed-data"
+import useProject from "@/hooks/useProjectContext";
 
 
 
 export const ListProjects = () => {
 
+    const {projectRef} = useProject();
+
     return (
         <>
-        <Box  display={"flex"} flexDirection="column" gap={4} alignItems={"center"}>
+        <Box ref={projectRef} display={"flex"} flexDirection="column" gap={4} alignItems={"center"}>
             <Typography display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
                 <AppsIcon sx={{fontSize: '50px'}}/>
                 Proyectos
@@ -27,7 +30,7 @@ export const ListProjects = () => {
             {/* <Box className="container">
                 <iframe className="frame"  src='https://totem.ivaras.cl'></iframe>
             </Box> */}
-        </Box>
+        </Box>  
         </>
         
     )

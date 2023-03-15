@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import NextImage from 'next/image';
 import {motion} from 'framer-motion';
 import {Button,Box, Card, CardMedia, IconButton, CardContent, Typography, Link,CardHeader} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -26,9 +27,9 @@ export const ProjectItem = ({project}:Props) => {
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
-            style={{width: 'content-fit'}}
+            
         >
-            <Card    onMouseOver={() => setActiveContent(true)} onMouseLeave={()=> setActiveContent(false)}>
+            <Card  sx={{ width: {xs:'330px' , sm: '450px'}}}  onMouseOver={() => setActiveContent(true)} onMouseLeave={()=> setActiveContent(false)}>
                 {/* <CardHeader 
                     sx={{pt: '-30px', 
                         backgroundColor: 'rgb(20,36,52, .95)',
@@ -40,16 +41,30 @@ export const ProjectItem = ({project}:Props) => {
 
                 
 
-                <Box position={"relative"}>
+                <Box position="relative">
                     <CardMedia 
-                        sx={{objectFit:'cover', 
-                        backgroundPosition: 'center',backgroundAttachment: 'fixed',
-                        filter: activeContent ? 'blur(5px)' : '' , width: {xs:'content-fit' , sm: '500px'}}} 
-                        component={"img"} 
-                        height={200}
+                        sx={{
+                        position: 'relative',
+                        objectFit:'cover', 
+                        backgroundPosition: 'center-top',
+                        height: {xs: 200, sm: 260},
+                        filter: activeContent ? 'blur(5px)' : '' ,
+
+                        
+                    }} 
+                        // component={NextImage} 
+                        // src={`/projects/${image}`} 
+                        // height={260}
+                        // width={500}
+                        // alt={title}
+                    >
+                        <NextImage
+                        style={{objectFit: 'cover'}}       
+                        fill
                         src={`/projects/${image}`} 
-                        alt={title}
-                    />
+                        sizes="(max-width: 768px) 60vw , (max-width: 1200px) 50vw, (min-width: 768px) 100vw" 
+                        alt={title}/>
+                    </CardMedia>
 
                 
   

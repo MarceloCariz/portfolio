@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <HomeLayout setIsOpen={setIsOpen} isOpen={isOpen} title="Portfolio - Marcelo Cariz" pageDescription="Portfolio - Marcelo Cariz">
-      <Box display={"flex"} flexDirection="column" alignItems={"center"}  gap={10}>
+      <Box display={"flex"} flexDirection="column" alignItems={"center"}  gap={15}>
         <ListMenuNavbar isOpen={isOpen}/>
         <Presentation/>
         <AboutMe/>

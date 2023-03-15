@@ -1,25 +1,36 @@
-import { Card, CardMedia, CardContent, Typography, Button } from '@mui/material'
+import { Card, CardMedia, CardContent, Typography, Button , Box} from '@mui/material';
+import NextImage from 'next/image';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import CardActions from '@mui/material/CardActions'
+import useProject from '@/hooks/useProjectContext';
 
 export const AboutMe = () => {
 
-    const onDowloadCV = () => {
-
-    }
-
+    const {aboutMeRef} = useProject();
     return (
-        <Card sx={{display: "flex", flexDirection: "column" , alignItems: 'center',  maxWidth: 345, padding: '10px', paddingTop: '20px'}}>
+        <Box ref={aboutMeRef}>
+            <Typography marginBottom={2} color={"primary"} textAlign={"center"} variant='h3' component={"div"}>Sobre mi</Typography>
+            <Card sx={{display: "flex", flexDirection: "column" , alignItems: 'center',  maxWidth: 345, padding: '10px', paddingTop: '20px'}}>
                 <CardMedia 
 
-                    sx={{borderRadius: 30, width: '180px' }} 
-                    height="180"  
-                    component={"img"}  
-                    image='/profile/photo.png' 
-                    alt="profile-photo"
-                />
+                    sx={{
+                        borderRadius: 30, width: '200px' ,     
+                        position: 'relative',
+                        height: 200,
+                    }} 
+
+                    
+                >
+                    <NextImage
+                        style={{objectFit: 'cover', borderRadius: '100px'}}       
+                        fill
+                        priority
+                        src={'/profile/photo.png'} 
+                        sizes="(max-width: 768px) 180px , (max-width: 1200px) 10px, (min-width: 768px) 180px" 
+                        alt="profile-photo"
+                    />
+                </CardMedia>
                 <CardContent>
-                    <Typography color={"primary"} textAlign={"center"} variant='h5' component={"div"}>Sobre mi</Typography>
                     <Typography  color={"primary"}>    
                         Titulado de la carrera de ingenieria en informatica Duoc. En busca de nuevos desafios
                         con el fin de mejorar profesionalmente 
@@ -32,5 +43,7 @@ export const AboutMe = () => {
                     </Button>
                 </CardActions>
         </Card>
+        </Box>
+
     )
 }

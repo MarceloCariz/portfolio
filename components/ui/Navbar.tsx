@@ -1,11 +1,12 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import {motion} from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Container, Link, Toolbar, Typography, Box, IconButton } from "@mui/material";
+import { AppBar,  Link, Toolbar, Typography, Box, IconButton } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import style from './navbar.module.css';
+import useProject from "@/hooks/useProjectContext";
 
 interface Props {
     isOpen: boolean;
@@ -14,6 +15,8 @@ interface Props {
 
 
 export const Navbar = ({isOpen, setIsOpen}:Props) => {
+
+    const {handleScrolling} = useProject();
 
 
     return (
@@ -25,9 +28,9 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
                 </Link>
 
                 <Box sx={{display: {xs: 'none' , md: 'flex'}}} flex={1} justifyContent="center" gap={4}>
-                    <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Sobre Mi</Typography>
-                    <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Habilidades</Typography>
-                    <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Proyectos</Typography>
+                    <Typography onClick={() => handleScrolling('about-me')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Sobre Mi</Typography>
+                    <Typography onClick={() => handleScrolling('skills')}sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Habilidades</Typography>
+                    <Typography onClick={() => handleScrolling('project')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1" component={"a"}>Proyectos</Typography>
                     <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Contacto</Typography>
 
                 </Box>
