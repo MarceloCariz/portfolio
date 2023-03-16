@@ -30,7 +30,7 @@ export const logos : string[] = [
     'express',
     'nestjs',
     'nodejs',
-    'mongo-db',
+    'mongo-DB',
     'oracle',
     'redux',
     'nextjs',

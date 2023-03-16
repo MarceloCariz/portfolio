@@ -96,7 +96,7 @@ export const ProjectItem = ({project}:Props) => {
                                         <Typography fontWeight={700} component="span">Descripción: </Typography>{description}
                                     </Typography>
 
-                                    <Box display={"flex"} gap={1}>
+                                    <Box display={"flex"} flexWrap="wrap" gap={1}>
                                         {
                                             tecnologies.map((name) => (
                                                 <Chip 
