@@ -16,10 +16,10 @@ export const Skills = () => {
             <Typography display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
                 <HandymanIcon  sx={{fontSize: '50px'}}/>
                 Habilidades</Typography>
-            <Grid container display={"flex"} justifyContent="center" spacing={4} marginTop={2}>
+            <Grid container  justifyContent="center" display={"flex"} spacing={4} marginTop={2}>
                 {
                     logos.map((url)=>(
-                        <Grid key={url} item>
+                        <Grid key={url} item >
                             <motion.div
                                 initial={{ scale: 0 }}
                                 animate={{ rotate: 360, scale: 1 }}

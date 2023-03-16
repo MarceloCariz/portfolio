@@ -29,17 +29,17 @@ export const ProjectItem = ({project}:Props) => {
             
         >
             <Card  
-                sx={{ 
+                // sx={{ 
                     // position: {xs: 'relative', sm:  activeContent ? 'absolute' : 'relative'},
                     // zIndex: {xs: 1 , sm: activeContent ? 2 : 1},
-                    width: {xs:'330px' , sm: '450px'}}}  
+                    // }}  
                 onMouseOver={() => setActiveContent(true)} 
                 onMouseLeave={()=> setActiveContent(false)}>
 
                 <CardHeader title={title}/>
 
             
-                <Box position="relative">
+                <Box position='relative'>
                     <CardMedia 
                         sx={{
                         position: 'relative',
@@ -58,7 +58,7 @@ export const ProjectItem = ({project}:Props) => {
                         sizes="(max-width: 768px) 60vw , (max-width: 1200px) 50vw, (min-width: 768px) 100vw" 
                         alt={title}/>
                     </CardMedia>
-                    <Box  visibility={activeContent ? "visible" : "hidden"} display={"flex"} flexDirection="column" justifyContent="center" alignItems={"center"} >
+                    <Box  display={activeContent ? "flex" : "none"} flexDirection="column" justifyContent="center" alignItems={"center"} >
                         <Box sx={{position: 'absolute',  top: '50%'}}>
                                 <Link href={url} target="_blank"  >
                                     <Button variant='contained'  endIcon={<LaunchIcon/>}>

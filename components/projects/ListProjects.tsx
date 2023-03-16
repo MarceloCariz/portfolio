@@ -16,6 +16,8 @@ export const ListProjects = () => {
             ref={projectRef} display={"flex"} 
             flexDirection="column" gap={4} 
             alignItems={"center"}
+            maxHeight={{xs: 'auto',sm:"650px"}}
+
             // height={{xs: 'auto',sm:"650px"}}
 
         >
@@ -24,18 +26,23 @@ export const ListProjects = () => {
                 Proyectos
             </Typography>
             <Grid 
-                sx={{
-                    display:'flex',
-                    // justifyContent: 'center', 
+                // sx={{
+                //     // display:'flex',
+                //     // justifyContent: 'center',
+                //     // alignItems: 'center', 
 
-                    flexDirection: {xs: 'column', sm: 'row'}}}   
-                container 
-                maxHeight={{xs: 'auto',sm:"650px"}}
+                //    }}   
+                container
+                flexDirection={{xs: 'column', sm: 'row'}}
+                display="flex"
+                justifyContent={"center"}
+                alignItems={{xs: 'center', sm: 'flex-start'}}
+                width={"100%"}
                 spacing={4} 
             >
                 {
                     projects.map((project) => (
-                        <Grid  key={project.title}   item xs={12} sm={6} md={4} >
+                        <Grid  key={project.title} sx={{width: {xs:'100vw' , sm: '50vw', md: '420px'}}}  item xs={12} sm={6} md={4} >
                             <ProjectItem  project={project}/>
                         </Grid>
                     ))
