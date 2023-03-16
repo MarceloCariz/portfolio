@@ -1,12 +1,22 @@
 import GitHub from '@mui/icons-material/GitHub'
-import {Box, IconButton} from '@mui/material'
+import {Box, IconButton, Typography} from '@mui/material'
 
 export const Footer = () => {
     return (
-        <Box height={"100px"}  position="static" marginTop={30} sx={{borderTop: '1px solid white'}}>
-            <IconButton>
+        <Box 
+            height={"100px"}  
+            position="static" 
+            marginTop={30} 
+            sx={{borderTop: '1px solid white'}}
+            display="flex"
+            justifyContent={"center"}
+            alignItems="center"
+        >
+            <IconButton href='https://github.com/MarceloCariz/portfolio' target={"_blank"}>
                 <GitHub color="primary"/>
             </IconButton>
+            <Typography color="primary">&copy; {new Date().getFullYear()} Marcelo Cariz todos los derechos reservados.</Typography>
+
         </Box>
     )
 }

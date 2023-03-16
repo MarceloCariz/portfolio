@@ -11,7 +11,13 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <HomeLayout setIsOpen={setIsOpen} isOpen={isOpen} title="Portfolio - Marcelo Cariz" pageDescription="Portfolio - Marcelo Cariz">
+    <HomeLayout 
+          imageFullUrl="/profile/logo-portfolio" 
+          setIsOpen={setIsOpen} 
+          isOpen={isOpen} 
+          title="Marcelo Cariz - Portfolio" 
+          pageDescription="Marcelo Cariz - Portfolio"
+    >
       <Box display={"flex"} flexDirection="column" alignItems={"center"}  gap={15}>
         <ListMenuNavbar isOpen={isOpen}/>
         <Presentation/>

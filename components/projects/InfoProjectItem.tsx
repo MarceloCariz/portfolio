@@ -30,7 +30,7 @@ export const InfoProjectItem = ({project, activeContent}:Props) => {
         variants={variants}
         animate={activeContent ? "open" : "closed"}
         >
-            <CardContent>
+            <CardContent >
                 <IconButton href={github} target={"_blank"}>
                     <GitHubIcon color="info" />
                 </IconButton>
@@ -49,7 +49,7 @@ export const InfoProjectItem = ({project, activeContent}:Props) => {
                         </Typography>
                     </Button>
                 )}
-                <Box display={"flex"} flexDirection="column" gap={2}>
+                <Box display={"flex"} flexDirection="column" gap={1}>
                     <Typography color={"primary"}>
                         <Typography fontWeight={700} component="span">
                         Proyecto:{" "}

@@ -32,10 +32,12 @@ export const AboutMe = () => {
                 >
                     <NextImage
                         style={{objectFit: 'cover', borderRadius: '100px'}}       
-                        fill
+                        // fill
+                        width={200}
+                        height={200}
                         priority
                         src={'/profile/photo.png'} 
-                        sizes="(max-width: 768px) 180px , (max-width: 1200px) 10px, (min-width: 768px) 180px" 
+                        // sizes="(max-width: 768px) 180px , (max-width: 1200px) 10px, (min-width: 768px) 180px" 
                         alt="profile-photo"
                     />
                 </CardMedia>

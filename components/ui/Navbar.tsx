@@ -1,4 +1,5 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
+import NextImage from 'next/image';
 import {motion} from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar,  Link, Toolbar, Typography, Box, IconButton } from "@mui/material";
@@ -21,35 +22,57 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
 
     return (
 
-        <AppBar sx={{ borderBottom: '1px white solid', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <Toolbar  sx={{ width:{xs: '100%' , md:'80%'}, display: "flex" , justifyContent: "space-between"}}>
-                <Link>
-                    <Typography color={"white"} variant="h5">Portafolio</Typography>
-                </Link>
-
-                <Box sx={{display: {xs: 'none' , md: 'flex'}}} flex={1} justifyContent="center" gap={4}>
-                    <Typography onClick={() => handleScrolling('about-me')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Sobre Mi</Typography>
-                    <Typography onClick={() => handleScrolling('skills')}sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Habilidades</Typography>
+        <AppBar sx={{ borderBottom: '1px white solid', display: 'flex', alignItems: 'center', height: 'auto'}}>
+            <Toolbar  sx={{ width:{xs: '100%' , md:'70%'}, display: "flex" , justifyContent:'space-between' ,alignItems:"center"}}>
+                <Box display={"flex"} justifyContent="center" width={{xs :"20%", sm: "120px"}}>
+                    <NextImage 
+                        
+                        width={38}
+                        height={38}
+                        src={"/profile/logo-portfolio.png"}
+                        alt="logo-portfolio"
+                    />
+                </Box>
+                <Box 
+                    sx={{display: {xs: 'none' , md: 'flex'}}} justifyContent="center" gap={4}>
+                    <Typography  onClick={() => handleScrolling('about-me')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
+                        Sobre Mi
+                    </Typography>
+                    <Typography onClick={() => handleScrolling('skills')}sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
+                        Habilidades
+                    </Typography>
                     <Typography onClick={() => handleScrolling('project')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1" component={"a"}>Proyectos</Typography>
-                    <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">Contacto</Typography>
+                    <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
+                        Contacto
+                    </Typography>
 
                 </Box>
 
-                <Box display={isOpen ? "none" : "flex"} gap={1} alignItems="center">
-                    <IconButton href="https://www.linkedin.com/in/marcelocariz/" target={"_blank"}>
-                        <LinkedInIcon color="primary"/>
-                    </IconButton>
-                    <IconButton href="https://github.com/MarceloCariz" target={"_blank"}>
-                        <GitHubIcon  color="primary"/>
-                    </IconButton>
-                    <IconButton href="mailto:marcelocariz4@gmail.com">
-                        <EmailIcon color="primary"/>
-                    </IconButton>
+                <Box 
+                    display={isOpen ? "none" : "flex"} gap={1} alignItems="center">
+                    <motion.div
+                        animate="show"   
+                        transition={{
+                            delay: 0.5,
+                            x: { duration: 1 },
+                            default: { ease: "easeInOut" }
+                        }}        
+                    >
+                        <IconButton translate="yes" href="https://www.linkedin.com/in/marcelocariz/" target={"_blank"}>
+                            <LinkedInIcon color="primary"/>
+                        </IconButton>
+                        <IconButton href="https://github.com/MarceloCariz" target={"_blank"}>
+                            <GitHubIcon  color="primary"/>
+                        </IconButton>
+                        <IconButton href="mailto:marcelocariz4@gmail.com">
+                            <EmailIcon color="primary"/>
+                        </IconButton>
+                    </motion.div>
+
                 </Box>
-                {/* <Box sx={{display: {xs: 'flex' , sm: 'none'}}}> */}
                     <motion.div
                         layout
-                        style={{width: isOpen ? '60%' : "20%"}}
+                        style={{width: isOpen ? '75%' : "20%"}}
                         initial={{ borderRadius: 50 }}
                         className={style.parent}
                         onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +86,6 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
                     </motion.div>
 
 
-                {/* </Box> */}
             </Toolbar>
         </AppBar>
 

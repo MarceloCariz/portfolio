@@ -16,7 +16,7 @@ export const Skills = () => {
             <Typography display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
                 <HandymanIcon  sx={{fontSize: '50px'}}/>
                 Habilidades</Typography>
-            <Grid container display={"flex"} justifyContent="center" spacing={3} marginTop={2}>
+            <Grid container display={"flex"} justifyContent="center" spacing={4} marginTop={2}>
                 {
                     logos.map((url)=>(
                         <Grid key={url} item>
@@ -38,6 +38,14 @@ export const Skills = () => {
                                         src={`/logos/${url}.png`}
                                     />
                             </Tooltip>
+                            <Typography 
+                                textAlign={"center"} 
+                                textTransform="capitalize" 
+                                color="primary"
+                                fontWeight={"600"}
+                            >
+                                    {url}
+                            </Typography>
 
                             </motion.div>
                         </Grid> 

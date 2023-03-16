@@ -63,11 +63,20 @@ export const projects: IProject[] = [
     },
     {
         title: 'Hardwarestore App',
-        description: 'Proyecto personal - control de gastos',
+        description: 'Proyecto personal - control de ventas durante el dia, agrupando por mes',
         image: 'daily.png',
         url: 'https://ferreteriapp.netlify.app/home/daily',
         github: 'https://github.com/MarceloCariz/totem-app',
-        tecnologies: ['react', 'mongo-DB' ,'nestjs' , 'javascript', "material-ui" ]
+        tecnologies: ['react', 'mongo-DB' ,'nestjs' , 'javascript', "material-ui", "redux" ]
+
+    },
+    {
+        title: 'Pokemon App',
+        description: 'Proyecto personal - uso de la api de pokemon - permite agregar tus pokemons favoritos',
+        image: 'pokemon-app.png',
+        url: 'https://pokemon-static-two-xi.vercel.app/',
+        github: 'https://github.com/MarceloCariz/Pokemon-static',
+        tecnologies: ['react', 'nextjs' , 'javascript', ]
 
     },
 

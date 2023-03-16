@@ -30,8 +30,7 @@ export const HomeLayout:FC<PropsWithChildren<Props>> = ({children, title, pageDe
             </Head>
 
             <nav>
-                    <Navbar setIsOpen={setIsOpen} isOpen={isOpen}/>
-
+                <Navbar setIsOpen={setIsOpen} isOpen={isOpen}/>
             </nav> 
 
             <main style={{

@@ -18,15 +18,23 @@ export const ProjectItem = ({project}:Props) => {
     const [activeContent, setActiveContent] = useState(false);
 
 
+
     const {url, title, image} = project;
 
     
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
+            // style={{ zIndex: activeContent ? 2 : 0}}
             
         >
-            <Card  sx={{ width: {xs:'330px' , sm: '450px'}}}  onMouseOver={() => setActiveContent(true)} onMouseLeave={()=> setActiveContent(false)}>
+            <Card  
+                sx={{ 
+                    // position: {xs: 'relative', sm:  activeContent ? 'absolute' : 'relative'},
+                    // zIndex: {xs: 1 , sm: activeContent ? 2 : 1},
+                    width: {xs:'330px' , sm: '450px'}}}  
+                onMouseOver={() => setActiveContent(true)} 
+                onMouseLeave={()=> setActiveContent(false)}>
 
                 <CardHeader title={title}/>
 
@@ -37,7 +45,7 @@ export const ProjectItem = ({project}:Props) => {
                         position: 'relative',
                         objectFit:'cover', 
                         backgroundPosition: 'center-top',
-                        height: {xs: 200, sm: 260},
+                        height: {xs: 200, sm: 200},
                         filter: activeContent ? 'blur(5px)' : '' ,
 
                         
