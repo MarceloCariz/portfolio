@@ -42,7 +42,7 @@ export const ListProjects = () => {
             >
                 {
                     projects.map((project) => (
-                        <Grid  key={project.title} sx={{width: {xs:'100vw' , sm: '50vw', md: '420px'}}}  item xs={12} sm={6} md={4} >
+                        <Grid  key={project.title} sx={{width: {xs:'105vw' , sm: '50vw', md: '420px'}}}  item xs={12} sm={6} md={4} >
                             <ProjectItem  project={project}/>
                         </Grid>
                     ))

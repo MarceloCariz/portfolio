@@ -19,7 +19,7 @@ export const Skills = () => {
             <Grid container  justifyContent="center" display={"flex"} spacing={4} marginTop={2}>
                 {
                     logos.map((url)=>(
-                        <Grid key={url} item >
+                        <Grid key={url}  item xs={6} sm={4} md={2}  display="flex" justifyContent={"center"}>
                             <motion.div
                                 initial={{ scale: 0 }}
                                 animate={{ rotate: 360, scale: 1 }}
