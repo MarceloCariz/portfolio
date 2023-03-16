@@ -1,20 +1,19 @@
 import {useReducer, useRef} from 'react'
-import { ProjectContext } from "./ProjectContext";
-import { ProjectReducer } from "./projectReducer";
+import { uiReducer, UiContext } from "./";
 
 
-export interface ProjectState {
+export interface UiState {
     isModalOpen: boolean;
 }
 
-const PROJECT_INITIAL_STATE:ProjectState = {
+const UI_INITIAL_STATE:UiState = {
     isModalOpen: false
 }
 
 
-export const ProjectProvider = ({children}:{children :React.ReactNode}) => {
+export const UiProvider = ({children}:{children :React.ReactNode}) => {
 
-    const [state, dispatch] = useReducer( ProjectReducer ,PROJECT_INITIAL_STATE);
+    const [state, dispatch] = useReducer( uiReducer ,UI_INITIAL_STATE);
 
     const projectRef = useRef<HTMLDivElement>(null);
     const skillRef = useRef<HTMLDivElement>(null);
@@ -43,11 +42,11 @@ export const ProjectProvider = ({children}:{children :React.ReactNode}) => {
     }
 
     const toogleOpenProjectModal = () => {
-        dispatch({type: '[PROJECT] - ToogleProject'});
+        dispatch({type: '[UI] - ToogleUi'});
     }
 
     return (
-        <ProjectContext.Provider 
+        <UiContext.Provider 
             value={{...state, 
                 toogleOpenProjectModal,
                 handleScrolling,
@@ -56,6 +55,6 @@ export const ProjectProvider = ({children}:{children :React.ReactNode}) => {
                 aboutMeRef
             }}>
             {children}
-        </ProjectContext.Provider>
+        </UiContext.Provider>
     )
 }

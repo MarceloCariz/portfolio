@@ -1,14 +1,14 @@
 import { Box, Typography, Grid } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
-import { ProjectItem } from "./ProjectItem";
+import { ProjectItem } from "./";
 import { projects } from "@/database/seed-data"
-import useProject from "@/hooks/useProjectContext";
+import useUI from "@/hooks/useUiContext";
 
 
 
 export const ListProjects = () => {
 
-    const {projectRef} = useProject();
+    const {projectRef} = useUI();
 
     return (
         <>

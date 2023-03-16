@@ -1,15 +1,24 @@
 import { Card, CardMedia, CardContent, Typography, Button , Box} from '@mui/material';
 import NextImage from 'next/image';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+
 import CardActions from '@mui/material/CardActions'
-import useProject from '@/hooks/useProjectContext';
+import useUI from '@/hooks/useUiContext';
 
 export const AboutMe = () => {
 
-    const {aboutMeRef} = useProject();
+    const {aboutMeRef} = useUI();
     return (
         <Box ref={aboutMeRef}>
-            <Typography marginBottom={2} color={"primary"} textAlign={"center"} variant='h3' component={"div"}>Sobre mí</Typography>
+            <Typography 
+                display={"flex"} gap={2} alignItems="center" justifyContent={"center"}
+                marginBottom={2} color={"primary"} 
+                textAlign={"center"} 
+                variant='h3' >
+                <AccountBoxIcon  sx={{fontSize: '50px'}}/>
+                Sobre mí
+            </Typography>
             <Card sx={{display: "flex", flexDirection: "column" , alignItems: 'center',  maxWidth: 345, padding: '10px', paddingTop: '20px'}}>
                 <CardMedia 
 

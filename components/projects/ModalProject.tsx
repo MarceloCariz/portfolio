@@ -1,6 +1,6 @@
 import { Modal, Box, Button, Grid ,IconButton, Typography} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
-import useProject from '@/hooks/useProjectContext';
+import useProject from '@/hooks/useUiContext';
 
 
 

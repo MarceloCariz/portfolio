@@ -1,13 +1,10 @@
 import {useState} from 'react';
 import NextImage from 'next/image';
 import {motion} from 'framer-motion';
-import {Button,Box, Card, CardMedia, IconButton, CardContent, Typography, Link,CardHeader, Chip} from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WebIcon from '@mui/icons-material/Web';
+import {Button,Box, Card, CardMedia, Typography, Link,CardHeader, Chip} from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { IProject } from '@/database/seed-data';
-import { ModalProject } from './ModalProject';
-import useProject from '@/hooks/useProjectContext';
+import { InfoProjectItem } from './';
 
 
 
@@ -18,12 +15,12 @@ interface Props {
 
 export const ProjectItem = ({project}:Props) => {
 
-    const [isOpenModal, setIsOpenModal] = useState(false)
     const [activeContent, setActiveContent] = useState(false);
-    const {isModalOpen, toogleOpenProjectModal} = useProject();
 
 
-    const {url, title,description, image, github, tecnologies} = project;
+    const {url, title, image} = project;
+
+    
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
@@ -66,56 +63,7 @@ export const ProjectItem = ({project}:Props) => {
                 
                 {
                     activeContent && (
-                        <motion.div 
-                            style={{position: 'relative', opacity: 0, transition: 'opacity 0.3s ease-in-out', display: 'grid'}}
-                            variants={variants} animate={activeContent ? "open" : "closed"}
-                        >
-                            <CardContent>
-                                <IconButton href={github} target={"_blank"}>
-                                    <GitHubIcon color='info'/>
-                                </IconButton>
-                                <IconButton  href={url} target={"_blank"}>
-                                    <WebIcon color='info'/>
-                                </IconButton>
-                                {
-                                        url === 'https://totem.ivaras.cl' && (
-                                            // <>
-                                                <Button onClick={toogleOpenProjectModal} variant='contained'  endIcon={<LaunchIcon/>}>
-                                                    <Typography color={"black"} fontWeight={500}>Ver pagina ajustada</Typography>
-                                                </Button>
-                                            // </>
-
-                                        )
-                                    }
-                                <Box display={"flex"} flexDirection="column" gap={2}>
-
-                                    <Typography color={"primary"}>
-                                        <Typography fontWeight={700} component="span">Proyecto: </Typography>{title}
-                                    </Typography>
-                                    <Typography color={"primary"}>
-                                        <Typography fontWeight={700} component="span">Descripción: </Typography>{description}
-                                    </Typography>
-
-                                    <Box display={"flex"} flexWrap="wrap" gap={1}>
-                                        {
-                                            tecnologies.map((name) => (
-                                                <Chip 
-                                                    key={name}
-                                                    sx={{placeItems:"center", textTransform:'capitalize', fontWeight: '600', color: 'white'}} 
-                                                    // color='primary' 
-                                                    label={name} 
-                                                    icon={<NextImage width={10} height={10} src={`/logos/${name}.png`} alt={name}/>}
-                                                />
-                                            ))
-                                        }
-                                    </Box>
-
-                                </Box>
-
-                            </CardContent>
-                        </motion.div>
-
-                        
+                        <InfoProjectItem project={project} activeContent={activeContent}/>
                     )
                 }
             </Card>
@@ -126,7 +74,3 @@ export const ProjectItem = ({project}:Props) => {
 }
 
 
-const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
-}

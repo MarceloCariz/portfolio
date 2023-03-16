@@ -1,2 +1,2 @@
 
-export {default as useProject} from './useProjectContext';
+export {default as useUI} from './useUiContext';

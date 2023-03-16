@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import { Box, Grid, Tooltip, Typography } from "@mui/material";
 import HandymanIcon from '@mui/icons-material/Handyman';
 import { logos } from "@/database/seed-data";
-import useProject from "@/hooks/useProjectContext";
+import useProject from "@/hooks/useUiContext";
 
 
 

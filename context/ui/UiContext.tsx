@@ -11,4 +11,4 @@ interface Props {
 }
 
 
-export const ProjectContext = createContext({} as Props);
+export const UiContext = createContext({} as Props);

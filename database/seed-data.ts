@@ -21,9 +21,11 @@ type TecnologiesTypes =
 'oracle'|
 'redux'|
 'nextjs'|
-'material-ui';
+'material-ui'|
+'tailwindcss'|
+'css';
 
-export const logos : string[] = [
+export const logos : TecnologiesTypes[] = [
     'react',
     'typescript',
     'javascript',
@@ -34,7 +36,9 @@ export const logos : string[] = [
     'oracle',
     'redux',
     'nextjs',
-    'material-ui'
+    'material-ui',
+    'tailwindcss',
+    'css'
 
 ]
 
@@ -47,7 +51,7 @@ export const projects: IProject[] = [
         image: 'maipogrande.png',
         url: 'http://168.138.133.24/',
         github: 'https://github.com/MarceloCariz/Frontend',
-        tecnologies: ['react', 'oracle' ,'javascript', 'express']
+        tecnologies: ['react', 'oracle' ,'javascript', 'express', "tailwindcss"]
     },
     {
         title: 'Totem Ivaras',
@@ -55,7 +59,7 @@ export const projects: IProject[] = [
         image: 'totem.png',
         url: 'https://totem.ivaras.cl',
         github: 'https://github.com/MarceloCariz/totem-app',
-        tecnologies: ['react', 'mongo-DB' ,'express' , 'javascript' ]
+        tecnologies: ['react', 'mongo-DB' ,'express' , 'javascript' , 'css']
     },
     {
         title: 'Hardwarestore App',
@@ -63,7 +67,7 @@ export const projects: IProject[] = [
         image: 'daily.png',
         url: 'https://ferreteriapp.netlify.app/home/daily',
         github: 'https://github.com/MarceloCariz/totem-app',
-        tecnologies: ['react', 'mongo-DB' ,'nestjs' , 'javascript' ]
+        tecnologies: ['react', 'mongo-DB' ,'nestjs' , 'javascript', "material-ui" ]
 
     },
 
