@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import NextImage from 'next/image';
 import {motion} from 'framer-motion';
-import {Button,Box, Card, CardMedia, IconButton, CardContent, Typography, Link,CardHeader} from '@mui/material';
+import {Button,Box, Card, CardMedia, IconButton, CardContent, Typography, Link,CardHeader, Chip} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -23,24 +23,17 @@ export const ProjectItem = ({project}:Props) => {
     const {isModalOpen, toogleOpenProjectModal} = useProject();
 
 
-    const {url, title,description, image, github} = project;
+    const {url, title,description, image, github, tecnologies} = project;
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
             
         >
             <Card  sx={{ width: {xs:'330px' , sm: '450px'}}}  onMouseOver={() => setActiveContent(true)} onMouseLeave={()=> setActiveContent(false)}>
-                {/* <CardHeader 
-                    sx={{pt: '-30px', 
-                        backgroundColor: 'rgb(20,36,52, .95)',
-                        position: 'absolute', 
-                        display: activeContent ? 'flex' : 'none',
-                        zIndex: 2,width: {xs:'300px' , sm: '400px'}, borderTopLeftRadius: '10px', borderTopRightRadius: '10px'}}  
-                    title={title} /> */}
+
                 <CardHeader title={title}/>
 
-                
-
+            
                 <Box position="relative">
                     <CardMedia 
                         sx={{
@@ -52,11 +45,6 @@ export const ProjectItem = ({project}:Props) => {
 
                         
                     }} 
-                        // component={NextImage} 
-                        // src={`/projects/${image}`} 
-                        // height={260}
-                        // width={500}
-                        // alt={title}
                     >
                         <NextImage
                         style={{objectFit: 'cover'}}       
@@ -65,26 +53,16 @@ export const ProjectItem = ({project}:Props) => {
                         sizes="(max-width: 768px) 60vw , (max-width: 1200px) 50vw, (min-width: 768px) 100vw" 
                         alt={title}/>
                     </CardMedia>
-
-                
-  
-                        <Box  visibility={activeContent ? "visible" : "hidden"} display={"flex"} flexDirection="column" justifyContent="center" alignItems={"center"} >
-                            <Box sx={{position: 'absolute',  top: '50%'}}>
-                                    <Link href={url} target="_blank"  >
-                                        <Button variant='contained'  endIcon={<LaunchIcon/>}>
-                                            <Typography color={"black"} fontWeight={500}>Ir a la pagina</Typography>
-                                        </Button>
-                                    </Link>
-
-                            </Box>
-
+                    <Box  visibility={activeContent ? "visible" : "hidden"} display={"flex"} flexDirection="column" justifyContent="center" alignItems={"center"} >
+                        <Box sx={{position: 'absolute',  top: '50%'}}>
+                                <Link href={url} target="_blank"  >
+                                    <Button variant='contained'  endIcon={<LaunchIcon/>}>
+                                        <Typography color={"black"} fontWeight={500}>Ir a la pagina</Typography>
+                                    </Button>
+                                </Link>
                         </Box>
+                    </Box>
                 </Box>
-            
-
-
-
-
                 
                 {
                     activeContent && (
@@ -109,9 +87,28 @@ export const ProjectItem = ({project}:Props) => {
 
                                         )
                                     }
-                                <Box>
-                                    <Typography color={"primary"}>Proyecto: {title}</Typography>
-                                    <Typography color={"primary"}>Descripcion: {description}</Typography>
+                                <Box display={"flex"} flexDirection="column" gap={2}>
+
+                                    <Typography color={"primary"}>
+                                        <Typography fontWeight={700} component="span">Proyecto: </Typography>{title}
+                                    </Typography>
+                                    <Typography color={"primary"}>
+                                        <Typography fontWeight={700} component="span">Descripción: </Typography>{description}
+                                    </Typography>
+
+                                    <Box display={"flex"} gap={1}>
+                                        {
+                                            tecnologies.map((name) => (
+                                                <Chip 
+                                                    sx={{placeItems:"center", textTransform:'capitalize', fontWeight: '600', color: 'white'}} 
+                                                    // color='primary' 
+                                                    label={name} 
+                                                    icon={<NextImage width={10} height={10} src={`/logos/${name}.png`} alt={name}/>}
+                                                />
+                                            ))
+                                        }
+                                    </Box>
+
                                 </Box>
 
                             </CardContent>

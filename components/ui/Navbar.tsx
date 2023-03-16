@@ -49,7 +49,7 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
                 {/* <Box sx={{display: {xs: 'flex' , sm: 'none'}}}> */}
                     <motion.div
                         layout
-                        style={{width: isOpen ? '65%' : "20%"}}
+                        style={{width: isOpen ? '60%' : "20%"}}
                         initial={{ borderRadius: 50 }}
                         className={style.parent}
                         onClick={() => setIsOpen(!isOpen)}

@@ -9,7 +9,7 @@ export const AboutMe = () => {
     const {aboutMeRef} = useProject();
     return (
         <Box ref={aboutMeRef}>
-            <Typography marginBottom={2} color={"primary"} textAlign={"center"} variant='h3' component={"div"}>Sobre mi</Typography>
+            <Typography marginBottom={2} color={"primary"} textAlign={"center"} variant='h3' component={"div"}>Sobre mí</Typography>
             <Card sx={{display: "flex", flexDirection: "column" , alignItems: 'center',  maxWidth: 345, padding: '10px', paddingTop: '20px'}}>
                 <CardMedia 
 

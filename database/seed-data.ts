@@ -17,7 +17,7 @@ type TecnologiesTypes =
 'express'|
 'nestjs'|
 'nodejs'|
-'mongo-db'|
+'mongo-DB'|
 'oracle'|
 'redux'|
 'nextjs'|
@@ -55,7 +55,7 @@ export const projects: IProject[] = [
         image: 'totem.png',
         url: 'https://totem.ivaras.cl',
         github: 'https://github.com/MarceloCariz/totem-app',
-        tecnologies: ['react', 'mongo-db' ,'express' , 'javascript' ]
+        tecnologies: ['react', 'mongo-DB' ,'express' , 'javascript' ]
     },
     {
         title: 'Hardwarestore App',
@@ -63,7 +63,7 @@ export const projects: IProject[] = [
         image: 'daily.png',
         url: 'https://ferreteriapp.netlify.app/home/daily',
         github: 'https://github.com/MarceloCariz/totem-app',
-        tecnologies: ['react', 'mongo-db' ,'nestjs' , 'javascript' ]
+        tecnologies: ['react', 'mongo-DB' ,'nestjs' , 'javascript' ]
 
     },
 
