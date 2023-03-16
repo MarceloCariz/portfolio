@@ -100,6 +100,7 @@ export const ProjectItem = ({project}:Props) => {
                                         {
                                             tecnologies.map((name) => (
                                                 <Chip 
+                                                    key={name}
                                                     sx={{placeItems:"center", textTransform:'capitalize', fontWeight: '600', color: 'white'}} 
                                                     // color='primary' 
                                                     label={name} 
