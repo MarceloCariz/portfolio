@@ -1,18 +1,20 @@
 import { Dispatch, SetStateAction, FC, PropsWithChildren} from "react";
 import Head from "next/head";
 import { Footer, Navbar } from "@/components/ui";
+import { ModalProject } from "@/components/projects";
+import { ListMenuNavbar } from "@/components/ui/ListMenuNavbar";
 
 
 interface Props {
     title: string;
     pageDescription: string;
     imageFullUrl?: string;
-    setIsOpen: Dispatch<SetStateAction<boolean>>;
-    isOpen: boolean;
+    setIsOpen?: Dispatch<SetStateAction<boolean>>;
+    isOpen?: boolean;
     
 }
 
-export const HomeLayout:FC<PropsWithChildren<Props>> = ({children, title, pageDescription, imageFullUrl, setIsOpen, isOpen}) =>{
+export const HomeLayout:FC<PropsWithChildren<Props>> = ({children, title, pageDescription, imageFullUrl}) =>{
 
     return(
         <>
@@ -30,8 +32,11 @@ export const HomeLayout:FC<PropsWithChildren<Props>> = ({children, title, pageDe
             </Head>
 
             <nav>
-                <Navbar setIsOpen={setIsOpen} isOpen={isOpen}/>
+                <Navbar />
             </nav> 
+            <ModalProject/>
+            <ListMenuNavbar />
+
 
             <main style={{
                 margin: '100px auto',
@@ -40,7 +45,6 @@ export const HomeLayout:FC<PropsWithChildren<Props>> = ({children, title, pageDe
             }}>
                 {children}
             </main>
-
             <footer>   
                 <Footer/>
             </footer>

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import NextImage from 'next/image';
 import {motion} from 'framer-motion';
-import {Button,Box, Card, CardMedia, Typography, Link,CardHeader, Chip} from '@mui/material';
+import {Button,Box, Card, CardMedia, Typography, Link,CardHeader, Chip, IconButton} from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { IProject } from '@/database/seed-data';
 import { InfoProjectItem } from './';
@@ -19,7 +19,7 @@ export const ProjectItem = ({project}:Props) => {
 
 
 
-    const {url, title, image} = project;
+    const {id, url, title, images} = project;
 
     
     return (
@@ -29,14 +29,11 @@ export const ProjectItem = ({project}:Props) => {
             
         >
             <Card  
-                // sx={{ 
-                    // position: {xs: 'relative', sm:  activeContent ? 'absolute' : 'relative'},
-                    // zIndex: {xs: 1 , sm: activeContent ? 2 : 1},
-                    // }}  
                 onMouseOver={() => setActiveContent(true)} 
                 onMouseLeave={()=> setActiveContent(false)}>
 
-                <CardHeader title={title}/>
+                <CardHeader title={title} sx={{textDecoration: 'none'}} component={"a"} href={`/project/${id}`}  />
+                    
 
             
                 <Box position='relative'>
@@ -54,7 +51,7 @@ export const ProjectItem = ({project}:Props) => {
                         <NextImage
                         style={{objectFit: 'cover'}}       
                         fill
-                        src={`/projects/${image}`} 
+                        src={`/projects/${images[0]}`} 
                         sizes="(max-width: 768px) 60vw , (max-width: 1200px) 50vw, (min-width: 768px) 100vw" 
                         alt={title}/>
                     </CardMedia>
@@ -67,6 +64,8 @@ export const ProjectItem = ({project}:Props) => {
                                 </Link>
                         </Box>
                     </Box>
+
+
                 </Box>
                 
                 {

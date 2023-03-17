@@ -4,7 +4,7 @@ export const Presentation = () => {
     return (
         <Box  
             className="fadeIn-presentation"
-            marginTop={5} sx={{height: {xs: '200px', sm: ''}}}   marginX={"5px"}>
+            marginTop={{xs:3, sm:5}}    marginX={"5px"}>
 
             <Typography component={"h6"} variant="h6" color="primary" textAlign={{xs:"left",sm:"center"}}>
                 ¡Hola!, soy

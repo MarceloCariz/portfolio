@@ -16,9 +16,7 @@ export const ListProjects = () => {
             ref={projectRef} display={"flex"} 
             flexDirection="column" gap={4} 
             alignItems={"center"}
-            maxHeight={{xs: 'auto',sm:"650px"}}
-
-            height={{xs: 'auto',sm:"650px"}}
+            height={{xs: 'auto',sm:"1100px"}}
 
         >
             <Typography color="primary" display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>

@@ -102,7 +102,7 @@ export const lightTheme = createTheme({
                 body: {
                     backgroundColor: '#0a1929',
                     backgroundImage: 
-                    `linear-gradient(180deg, rgba(10,25,41,1) 12%, rgba(9,47,69,1) 49%, rgba(10,25,41,1) 89%)`,
+                    `linear-gradient(180deg, rgba(10,25,41,1) 12%, rgba(9,47,69,1) 49%, rgba(10,25,41,1) 65%)`,
                 },
             },
         },      

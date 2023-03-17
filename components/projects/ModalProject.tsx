@@ -16,19 +16,20 @@ export const ModalProject = () => {
                         container
                         justifyContent="center"
                         alignItems="center"
-                        height="100%"
+                        // height="100%"
                         sx={{ outline: 'none' }}
                         >
-                        <Box p={2} sx={{width: 400, height: 800 }}>
+                        <Box p={2} sx={{width:{xs: '80vw', sm: '22vw'}, height: 800 }}>
                             <iframe
                             src={'https://totem.ivaras.cl'}
                             width="1080"
                             height="1920"
                             allowFullScreen
-                            style={{
-                                transform: 'scale(0.34)',
-                                transformOrigin: 'top left ',
-                            }}
+                            // style={{
+                            //     transform: 'scale(0.25)',
+                            //     transformOrigin: 'top left ',
+                            // }}
+                            className="frame"
                             ></iframe>
 
                         </Box>

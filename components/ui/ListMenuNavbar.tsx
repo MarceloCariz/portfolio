@@ -7,18 +7,16 @@ import HandymanIcon from '@mui/icons-material/Handyman';
 import AppsIcon from '@mui/icons-material/Apps';
 import style from './navbar.module.css';
 
-interface Props {
-    isOpen: boolean
-}
 
-export const ListMenuNavbar = ({isOpen}:Props) => {
-    const {handleScrolling} = useUI();
+
+export const ListMenuNavbar = () => {
+    const {handleScrolling, isOpenNavbar} = useUI();
 
     return (
         
         <motion.ul
-                animate={isOpen ? "show" : "close"}
-                style={{ display: isOpen ? "flex" : "none" ,pointerEvents: isOpen ? "auto" : "none", zIndex: 2 }}
+                animate={isOpenNavbar ? "show" : "close"}
+                style={{ display: isOpenNavbar ? "flex" : "none" ,pointerEvents: isOpenNavbar ? "auto" : "none", zIndex: 2 }}
                 className={`${style.listmenu} fadeIn`}
             > 
             <Box color={"primary"}>
