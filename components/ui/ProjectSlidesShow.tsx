@@ -14,7 +14,7 @@ export const ProjectSlidesShow = ({images}:Props) => {
             duration={3000}
             indicators={false}
             autoplay={true}
-            arrows={false}
+            arrows={true}
             
         >
 

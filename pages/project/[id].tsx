@@ -17,8 +17,8 @@ const ProjectPage:NextPage<Props> = ({project}) => {
     const {title, description, images, url, tecnologies} = project;
     return (
         <HomeLayout title={title} pageDescription={description} imageFullUrl={images[0]} >
-            <Box display={"flex"} alignItems="center" gap={2} >
-                <Typography color="primary" fontSize={{xs: 30, sm: 40}}  variant={"h3"} component={"h2"}>
+            <Box display={"flex"} alignItems="center" justifyContent={"space-between"} gap={2} >
+                <Typography color="primary" fontSize={{xs: 27, sm: 40}}  variant={"h3"} component={"h2"}>
                     {title}
                 </Typography>
                 <NextLink href={url} target="_blank" style={{textDecoration: 'none'}}  >
@@ -35,13 +35,13 @@ const ProjectPage:NextPage<Props> = ({project}) => {
                 </Grid>
                 <Grid item xs={12} sm={5} display="flex" flexDirection={"column"}>
 
-                    <Typography color="primary"  variant="h4" component={"h2"}>Descripción: </Typography>
-                    <Typography color={"primary"}>
+                    <Typography color="primary"  fontSize={{xs: 23, sm: 40}} fontWeight={500} variant="h4" component={"h2"}>Descripción: </Typography>
+                    <Typography color={"primary"} >
                         {description}
                     </Typography>
                     
                     <Box marginTop={2}>
-                        <Typography color="primary"  variant="h4" component={"h2"}>Tecnologias Usadas: </Typography>
+                        <Typography color="primary" fontSize={{xs: 23, sm: 40}} fontWeight={500}  variant="h4" component={"h2"}>Tecnologias Usadas: </Typography>
                         <TecnologiesList  tecnologies={tecnologies}/>
                     </Box>
 
