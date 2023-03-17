@@ -26,7 +26,6 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
             <Toolbar  sx={{ width:{xs: '100%' , md:'70%'}, display: "flex" , justifyContent:'space-between' ,alignItems:"center"}}>
                 <Box display={"flex"} justifyContent="center" width={{xs :"20%", sm: "120px"}}>
                     <NextImage 
-                        
                         width={38}
                         height={38}
                         src={"/profile/logo-portfolio.png"}
@@ -49,7 +48,9 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
                 </Box>
 
                 <Box 
-                    display={isOpen ? "none" : "flex"} gap={1} alignItems="center">
+                    display={isOpen ? "none" : "flex"} gap={1} alignItems="center"
+                    
+                    >
                     <motion.div
                         animate="show"   
                         transition={{
@@ -69,7 +70,8 @@ export const Navbar = ({isOpen, setIsOpen}:Props) => {
                         </IconButton>
                     </motion.div>
 
-                </Box>
+                </Box >
+                
                     <motion.div
                         layout
                         style={{width: isOpen ? '75%' : "20%"}}

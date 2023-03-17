@@ -18,7 +18,7 @@ export default function Home() {
           title="Marcelo Cariz - Portfolio" 
           pageDescription="Marcelo Cariz - Portfolio"
     >
-      <Box display={"flex"} flexDirection="column" alignItems={"center"}  gap={15}>
+      <Box display={"flex"} flexDirection="column" alignItems={"center"}  gap={10}>
         <ListMenuNavbar isOpen={isOpen}/>
         <Presentation/>
         <AboutMe/>

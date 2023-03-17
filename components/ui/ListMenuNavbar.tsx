@@ -19,9 +19,9 @@ export const ListMenuNavbar = ({isOpen}:Props) => {
         <motion.ul
                 animate={isOpen ? "show" : "close"}
                 style={{ display: isOpen ? "flex" : "none" ,pointerEvents: isOpen ? "auto" : "none", zIndex: 2 }}
-                className={style.listmenu}
+                className={`${style.listmenu} fadeIn`}
             > 
-            <Box >
+            <Box color={"primary"}>
                 <motion.li
                         whileTap={{ scale: 0.95 }}
                     >

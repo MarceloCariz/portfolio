@@ -18,10 +18,10 @@ export const ListProjects = () => {
             alignItems={"center"}
             maxHeight={{xs: 'auto',sm:"650px"}}
 
-            // height={{xs: 'auto',sm:"650px"}}
+            height={{xs: 'auto',sm:"650px"}}
 
         >
-            <Typography display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
+            <Typography color="primary" display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
                 <AppsIcon sx={{fontSize: '50px'}}/>
                 Proyectos
             </Typography>

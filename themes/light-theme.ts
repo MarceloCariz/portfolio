@@ -28,7 +28,7 @@ export const lightTheme = createTheme({
         },
         styleOverrides: {
             root: {
-                backgroundColor: '#0a1929',
+                backgroundColor: 'rgba(3.9%, 9.8%, 16.1%, 1)',
                 // backgroundImage: 
                 // `linear-gradient(9deg, rgba(10,25,41,1) 20%, rgba(4,121,145,1) 72%, rgba(10,25,41,1) 100%, rgba(0,212,255,1) 100%)`,
             height: 60,
@@ -48,6 +48,7 @@ export const lightTheme = createTheme({
             },
             h3:{
                 color: "#fff",
+                fontSize: 40,
                 fontWeight: 500,
             },
             subtitle1: {
@@ -90,7 +91,7 @@ export const lightTheme = createTheme({
         },
         styleOverrides: {
             root: {
-            backgroundColor: '#142434',
+            backgroundColor: '#092F45',
             boxShadow: "0px 25px 25px rgba(0,0,0,0.07)",
             borderRadius: "10px",
             },

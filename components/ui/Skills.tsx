@@ -13,7 +13,7 @@ export const Skills = () => {
     const {skillRef} = useProject();
     return (
         <Box ref={skillRef} display={"flex"} width="70%" flexDirection="column" alignItems={"center"}>
-            <Typography display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
+            <Typography color="primary" display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
                 <HandymanIcon  sx={{fontSize: '50px'}}/>
                 Habilidades</Typography>
             <Grid container  justifyContent="center" display={"flex"} spacing={4} marginTop={2}>
