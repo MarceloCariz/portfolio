@@ -3,17 +3,55 @@
 
 .each-slide > div {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     background-size: contain;
     background-position: center;
     height: 430px;
-    width: 40vw;
-
+    width: 44vw;
 }
 
-@media (max-width: 600px) {
+
+
+
+
+
+.indicator  li {
+    color: white;
+}
+/*  
+.indicator ul {
+    border-radius: 30px;
+    background-color: white;
+    width: fit-content;
+    display: flex !important;
+    justify-content: center !important;
+} */
+
+@media (max-width : 550px) {
+    .each-slide > div{
+        height: 90vh;
+    }
+}
+
+
+@media (max-width : 620px) {
     .each-slide > div{
         height: 50vh;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .each-slide > div{
+        height: 25vh;
+        width: 10%;
+    }
+}
+
+/* iphone 12 pro */
+@media (max-width: 820px) { 
+    .each-slide > div{
+        height: 20vh;
         width: 100%;
     }
 }

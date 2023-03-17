@@ -32,7 +32,10 @@ export const ProjectItem = ({project}:Props) => {
                 onMouseOver={() => setActiveContent(true)} 
                 onMouseLeave={()=> setActiveContent(false)}>
 
-                <CardHeader title={title} sx={{textDecoration: 'none'}} component={"a"} href={`/project/${id}`}  />
+                <CardHeader 
+                    title={title}
+                    action={<IconButton sx={{pb:1}} href={`/project/${id}`}><LaunchIcon color='primary'/></IconButton>}
+                />
                     
 
             
@@ -59,7 +62,7 @@ export const ProjectItem = ({project}:Props) => {
                         <Box sx={{position: 'absolute',  top: '50%'}}>
                                 <Link href={url} target="_blank"  >
                                     <Button variant='contained'  endIcon={<LaunchIcon/>}>
-                                        <Typography color={"black"} fontWeight={500}>Ir a la pagina</Typography>
+                                        <Typography color={"black"} fontWeight={500}>Ir a {title}</Typography>
                                     </Button>
                                 </Link>
                         </Box>

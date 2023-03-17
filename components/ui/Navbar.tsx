@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar,   Toolbar, Typography, Box, IconButton } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import CloseIcon from '@mui/icons-material/Close';
 import EmailIcon from '@mui/icons-material/Email';
 import style from './navbar.module.css';
 import useUI from "@/hooks/useUiContext";
@@ -20,12 +21,12 @@ export const Navbar = () => {
     return (
 
         <AppBar sx={{ borderBottom: '1px white solid', display: 'flex', alignItems: 'center', height: 'auto'}}>
-            <Toolbar  sx={{ width:{xs: '100%' , md:'70%'}, display: "flex" , justifyContent:'space-between' ,alignItems:"center"}}>
-                <Box display={"flex"} justifyContent="center" width={{xs :"20%", sm: "120px"}}>
-                    <NextLink href={"/"}>
+            <Toolbar  sx={{ width:{xs: '100%' , md:'80%'}, display: "flex" , justifyContent:'space-between' ,alignItems:"center"}}>
+                <Box display={"flex"} justifyContent="center" alignItems={"center"} width={{xs :"20%", sm: "120px"}}>
+                    <NextLink   href={"/"} style={{display:"flex"}}>
                         <NextImage 
-                            width={38}
-                            height={38}
+                            width={40}
+                            height={40}
                             src={"/profile/logo-portfolio.png"}
                             alt="logo-portfolio"
                         />
@@ -59,13 +60,13 @@ export const Navbar = () => {
                             default: { ease: "easeInOut" }
                         }}        
                     >
-                        <IconButton translate="yes" href="https://www.linkedin.com/in/marcelocariz/" target={"_blank"}>
-                            <LinkedInIcon color="primary"/>
+                        <IconButton  translate="yes" href="https://www.linkedin.com/in/marcelocariz/" target={"_blank"}>
+                            <LinkedInIcon   sx={{"&:hover":{color: '#0A66C2'}}} color="primary"/>
                         </IconButton>
-                        <IconButton href="https://github.com/MarceloCariz" target={"_blank"}>
+                        <IconButton translate="yes" href="https://github.com/MarceloCariz" target={"_blank"}>
                             <GitHubIcon  color="primary"/>
                         </IconButton>
-                        <IconButton href="mailto:marcelocariz4@gmail.com">
+                        <IconButton  translate="yes" href="mailto:marcelocariz4@gmail.com">
                             <EmailIcon color="primary"/>
                         </IconButton>
                     </motion.div>
@@ -79,10 +80,12 @@ export const Navbar = () => {
                         className={style.parent}
                         onClick={toogleMenuNavbar}
                     > 
-                        <motion.div 
-                            layout 
-                        >
-                            <MenuIcon sx={{pt:1 , width: '100px'}}  fontSize="large"/>
+                        <motion.div layout >
+                            {isOpenNavbar 
+                                ? (<CloseIcon sx={{pt:1 , width: '100px'}}  fontSize="large"/>)
+                                : (<MenuIcon sx={{pt:1 , width: '100px'}}  fontSize="large"/>)
+                            }
+                            
                         </motion.div>
 
                     </motion.div>

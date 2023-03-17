@@ -50,7 +50,10 @@ export const projects: IProject[] = [
         id: 1,
         title: 'MaipoGrande',
         description: 'Proyecto de portafolio - venta local e internacional de frutas y verduras',
-        images: ['maipogrande.png'],
+        images: ['maipogrande.png', 'maipogrande-1.png','maipogrande-2.png','maipogrande-3.png','maipogrande-4.png','maipogrande-5.png',
+        'maipogrande-6.png','maipogrande-7.png','maipogrande-8.png','maipogrande-9.png','maipogrande-10.png','maipogrande-11.png','maipogrande-12.png',
+        'maipogrande-13.png','maipogrande-14.png','maipogrande-15.png','maipogrande-16.png','maipogrande-17.png','maipogrande-18.png','maipogrande-19.png',
+        'maipogrande-20.png','maipogrande-21.png','maipogrande-22.png'],
         url: 'http://168.138.133.24/',
         github: 'https://github.com/MarceloCariz/Frontend',
         tecnologies: ['react', 'oracle' ,'javascript', 'express', "tailwindcss"]
@@ -78,7 +81,7 @@ export const projects: IProject[] = [
         id: 4,
         title: 'Pokemon App',
         description: 'Proyecto personal - uso de la api de pokemon - permite agregar tus pokemons favoritos',
-        images: ['pokemon-app.png'],
+        images: ['pokemon-1.png','pokemon-2.png','pokemon-3.png'],
         url: 'https://pokemon-static-two-xi.vercel.app/',
         github: 'https://github.com/MarceloCariz/Pokemon-static',
         tecnologies: ['react', 'nextjs' , 'javascript', ]
