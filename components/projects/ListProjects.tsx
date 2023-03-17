@@ -48,9 +48,6 @@ export const ListProjects = () => {
                     ))
                 }
             </Grid>
-            {/* <Box className="container">
-                <iframe className="frame"  src='https://totem.ivaras.cl'></iframe>
-            </Box> */}
         </Box>  
         </>
         

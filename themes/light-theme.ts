@@ -3,7 +3,8 @@ import {createTheme} from '@mui/material'
 export const lightTheme = createTheme({
     palette: {
         mode: "light",
-        background:{ default: '#0A1929'},
+        // background:{ default: '#047991'},
+        // background: {default: 'rgb(2,0,36)'},
         primary: {
             main: "#fff",
         },
@@ -27,7 +28,9 @@ export const lightTheme = createTheme({
         },
         styleOverrides: {
             root: {
-            backgroundColor: "#0A1929",
+                backgroundColor: '#0a1929',
+                // backgroundImage: 
+                // `linear-gradient(9deg, rgba(10,25,41,1) 20%, rgba(4,121,145,1) 72%, rgba(10,25,41,1) 100%, rgba(0,212,255,1) 100%)`,
             height: 60,
             },
         },
@@ -93,5 +96,14 @@ export const lightTheme = createTheme({
             },
         },
         },
+        MuiCssBaseline: {
+            styleOverrides: {
+                body: {
+                    backgroundColor: '#0a1929',
+                    backgroundImage: 
+                    `linear-gradient(180deg, rgba(10,25,41,1) 12%, rgba(9,47,69,1) 49%, rgba(10,25,41,1) 89%)`,
+                },
+            },
+        },      
     },
 });

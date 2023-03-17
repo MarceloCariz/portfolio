@@ -25,30 +25,33 @@ export const InfoProjectItem = ({project, activeContent}:Props) => {
             position: "relative",
             opacity: 0,
             transition: "opacity 0.3s ease-in-out",
-            display: "grid",
         }}
         variants={variants}
         animate={activeContent ? "open" : "closed"}
         >
-            <CardContent >
-                <IconButton href={github} target={"_blank"}>
-                    <GitHubIcon color="info" />
-                </IconButton>
-                <IconButton href={url} target={"_blank"}>
-                    <WebIcon color="info" />
-                </IconButton>
+            <CardContent sx={{display:'flex', alignItems:'start', flexDirection:'column'}}>
+                <Box>
+                    <IconButton href={github} target={"_blank"}>
+                        <GitHubIcon color="info" />
+                    </IconButton>
+                    <IconButton href={url} target={"_blank"}>
+                        <WebIcon color="info" />
+                    </IconButton>
+                    {url === "https://totem.ivaras.cl" && (
+                        <Button
+                            onClick={toogleOpenProjectModal}
+                            variant="contained"
+                            endIcon={<LaunchIcon />}
+                        >
+                            <Typography color={"black"} fontWeight={500}>
+                            Ver pagina ajustada
+                            </Typography>
+                        </Button>
+                    )}
+                </Box>
 
-                {url === "https://totem.ivaras.cl" && (
-                    <Button
-                        onClick={toogleOpenProjectModal}
-                        variant="contained"
-                        endIcon={<LaunchIcon />}
-                    >
-                        <Typography color={"black"} fontWeight={500}>
-                        Ver pagina ajustada
-                        </Typography>
-                    </Button>
-                )}
+
+
                 <Box display={"flex"} flexDirection="column" gap={1}>
                     <Typography color={"primary"}>
                         <Typography fontWeight={700} component="span">
@@ -60,7 +63,7 @@ export const InfoProjectItem = ({project, activeContent}:Props) => {
                         <Typography fontWeight={700} component="span">
                         Descripción:{" "}
                         </Typography>
-                        {description}
+                        {description}.
                     </Typography>
 
                     <Box display={"flex"} flexWrap="wrap" gap={1}>
