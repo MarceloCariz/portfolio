@@ -5,10 +5,9 @@ export const Footer = () => {
     return (
         <Box 
             height={"100px"}  
-            width="100%"
-            // position="absolute"
-            bottom={0} 
-            // marginTop={25} 
+            // width="100%"
+            position="static"
+            // bottom={0} 
             sx={{borderTop: '1px solid white'}}
             display="flex"
             justifyContent={"center"}

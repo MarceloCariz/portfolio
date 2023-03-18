@@ -13,10 +13,12 @@ export const ListProjects = () => {
     return (
         <>
         <Box   
-            ref={projectRef} display={"flex"} 
+            ref={projectRef} 
+            display={"flex"} 
+            position="relative"
             flexDirection="column" gap={4} 
             alignItems={"center"}
-            maxHeight="1100px"
+            minHeight="1100px"
 
         >
             <Typography color="primary" display={"flex"} gap={2} alignItems="center" variant="h3" component={"h2"}>
