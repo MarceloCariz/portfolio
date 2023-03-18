@@ -27,6 +27,7 @@ export const Navbar = () => {
                         <NextImage 
                             width={40}
                             height={40}
+                            priority
                             src={"/profile/logo-portfolio.png"}
                             alt="logo-portfolio"
                         />

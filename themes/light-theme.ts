@@ -101,7 +101,7 @@ export const lightTheme = createTheme({
             styleOverrides: {
                 body: {
                     backgroundColor: '#0a1929', //#00445A
-                    backgroundImage: `linear-gradient(180deg, rgba(10,25,41,1) 12%, rgba(9,47,69,1) 60%, rgba(10,25,41,1) 70%)`,
+                    backgroundImage: `linear-gradient(180deg, rgba(10,25,41,1) 12%, rgba(9,47,69,1) 50%, rgba(10,25,41,1) 70%)`,
                     // backgroundImage: 'linear-gradient(to right top, #0a1929, #0b2335, #0a2e42, #07394e, #00445a)'
                 },
             },
