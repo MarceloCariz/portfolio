@@ -34,6 +34,7 @@ export const ProjectItem = ({project}:Props) => {
 
                 <CardHeader 
                     title={title}
+                    sx={{cursor: 'default'}}
                     action={<IconButton sx={{pb:1}} href={`/project/${id}`}><LaunchIcon color='primary'/></IconButton>}
                 />
                     

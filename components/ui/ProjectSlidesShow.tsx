@@ -26,7 +26,7 @@ export const ProjectSlidesShow = ({images}:Props) => {
                         const url = `/projects/${image}`;
                         return (
                             <div className={styles['each-slide']} key={image}>
-                                <div style={{backgroundImage: `url(${url})`, backgroundRepeat:'no-repeat'}}>
+                                <div className={styles.image} style={{backgroundImage: `url(${url})`}}>
 
                                 </div>
                             </div>

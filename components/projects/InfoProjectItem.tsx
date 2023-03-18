@@ -20,6 +20,7 @@ export const InfoProjectItem = ({project, activeContent}:Props) => {
     const { github, url, tecnologies, description, title, id} = project;
     const { toogleOpenProjectModal} = useUI();
 
+
     return (
         <motion.div
         style={{

@@ -56,7 +56,7 @@ export const UiProvider = ({children}:{children :React.ReactNode}) => {
 
         aboutMeRef.current && nameRef === 'about-me' && ScrollTopPositionRef(aboutMeRef);
 
-        dispatch({type: '[UI] - ToogleNavbarMenu'});
+        state.isOpenNavbar && dispatch({type: '[UI] - ToogleNavbarMenu'});
 
     }
 

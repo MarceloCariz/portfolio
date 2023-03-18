@@ -6,13 +6,17 @@
     justify-content: center;
     background-size: contain;
     background-position: center;
-    height: 430px;
-    width: 44vw;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 390px;
+    width: 42vw;
 }
 
 
 
-
+.image {
+    border-radius: 40px;
+}
 
 
 .indicator  li {
