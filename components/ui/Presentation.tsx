@@ -35,7 +35,7 @@ export const Presentation = () => {
 
             <Typography
                 color={"primary"}  
-                component={"h1"} 
+                component={"h2"} 
                 variant="h4" 
                 textAlign={{xs:"left",sm:"center"}}
                 fontSize={25}
