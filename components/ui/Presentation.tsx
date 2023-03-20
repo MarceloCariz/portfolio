@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 export const Presentation = () => {
     return (
         <Box  
-            className="fadeIn-presentation"
+            // className="fadeIn-presentation"
             marginTop={{xs:3, sm:5}}    marginX={"5px"}>
 
             <Typography component={"h6"} variant="h6" color="primary" textAlign={{xs:"left",sm:"center"}}>

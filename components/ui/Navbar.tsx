@@ -24,7 +24,7 @@ export const Navbar = () => {
             <Toolbar  sx={{ width:{xs: '100%' , md:'80%'}, display: "flex" , justifyContent:'space-between' ,alignItems:"center"}}>
                 <Box display={"flex"} justifyContent="center" alignItems={"center"} width={{xs :"20%", sm: "120px"}}>
                     <NextLink   href={"/"} passHref legacyBehavior style={{display:"flex"}}>
-                        <Link>
+                        <Link display={"flex"}>
                             <NextImage 
                                 width={40}
                                 height={40}
@@ -39,13 +39,14 @@ export const Navbar = () => {
                 </Box>
                 <Box 
                     sx={{display: {xs: 'none' , md: 'flex'}}} justifyContent="center" gap={4}>
+                    
                     <Typography  onClick={() => handleScrolling('about-me')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
                         Sobre Mi
                     </Typography>
                     <Typography onClick={() => handleScrolling('skills')}sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
                         Habilidades
                     </Typography>
-                    <Typography onClick={() => handleScrolling('project')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1" component={"a"}>Proyectos</Typography>
+                    <Typography onClick={() => handleScrolling('project')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1" >Proyectos</Typography>
                     <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
                         Contacto
                     </Typography>
