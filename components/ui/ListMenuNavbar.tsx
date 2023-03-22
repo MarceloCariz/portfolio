@@ -25,7 +25,6 @@ export const ListMenuNavbar = () => {
                     >
                         <Typography 
                             onClick={() => handleScrolling('about-me')} 
-                            component="a" 
                             color={"black"}  
                             variant="subtitle1"
                             sx={{display: 'flex', alignItems: 'center', gap: 1}}
@@ -35,9 +34,9 @@ export const ListMenuNavbar = () => {
                         </Typography>
                 </motion.li>
                 <motion.li whileTap={{ scale: 0.95 }}>
+                    
                     <Typography 
                         onClick={() => handleScrolling('skills')} 
-                        component="a" 
                         color={"black"} 
                         variant="subtitle1"
                         sx={{display: 'flex', alignItems: 'center', gap: 1}}
@@ -49,7 +48,6 @@ export const ListMenuNavbar = () => {
                 <motion.li whileTap={{ scale: 0.95 }}>
                     <Typography 
                         onClick={() => handleScrolling('project')} 
-                        component="a" 
                         color={"black"} 
                         variant="subtitle1"
                         sx={{display: 'flex', alignItems: 'center', gap: 1}}

@@ -42,9 +42,9 @@ export const AboutMe = () => {
                     />
                 </CardMedia>
                 <CardContent>
-                    <Typography  color={"primary"}>    
-                        Titulado de la carrera de ingenieria en informatica Duoc. En busca de nuevos desafios
-                        con el fin de mejorar profesionalmente 
+                    <Typography textAlign={'center'}  color={"primary"}>    
+                    Titulado de la carrera de Ingeniería en Informática de Duoc UC. Soy una persona enfocada en 
+                    estar en constante aprendizaje que me permita la búsqueda de nuevos desafíos con el fin de mejorar profesionalmente.
                     </Typography>
 
                 </CardContent>

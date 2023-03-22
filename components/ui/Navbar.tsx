@@ -47,9 +47,9 @@ export const Navbar = () => {
                         Habilidades
                     </Typography>
                     <Typography onClick={() => handleScrolling('project')} sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1" >Proyectos</Typography>
-                    <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
+                    {/* <Typography sx={{cursor: 'pointer'}} color={"primary"} variant="subtitle1">
                         Contacto
-                    </Typography>
+                    </Typography> */}
 
                 </Box>
 
