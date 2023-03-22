@@ -23,6 +23,7 @@ export const HomeLayout:FC<PropsWithChildren<Props>> = ({children, title, pageDe
                 <meta name="description" content={pageDescription}/>
                 <meta name="og:title" content={title}/>
                 <meta name="og:description" content={pageDescription}/>
+                <meta name="google-site-verification" content="tM0vgkivQ3GrTeyd5nhCpvEK3NO9JdNcliQa9vbmvho" />
 
                 {
                     imageFullUrl && (
